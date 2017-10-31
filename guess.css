@@ -1,0 +1,13 @@
+body {
+	text-align: center;
+	background-color: #d1d1e0;
+	font-family: Georgia;
+}
+#again {
+	display: none;
+}
+img {
+	display: none;
+	margin: auto;
+	height: 200px;
+}

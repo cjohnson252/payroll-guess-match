@@ -1,0 +1,16 @@
+#payroll {
+	display: none;
+	border-collapse: collapse;
+	text-align: center;
+}
+td {
+	border: 1px solid black;
+	padding: 5px;
+}
+#total {
+	display: none;
+}
+body {
+	background-color: #d1d1e0;
+	font-family: Georgia;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="all" href="guess.css"/>
+	<script src="guess.js"></script>
+	<title>Guess</title>
+</head>
+<body onload="time()">
+	<form id="input">
+		<p>
+			<label id="guess_label">Guess the Number:</label>
+			<input id="guess_input" name="guess" type="text" />
+		</p>
+		<input type="submit" value="Guess" onclick="checkGuess(); return false;">
+	</form>
+	<p id="timer"></p>
+	<p id="remainingGuesses"></p>
+	<p id="report"></p>
+	<form id="again">
+		<input type="submit" value="Play Again" onclick="reset();">
+	</form>
+	<br>
+	<img id="winner" alt="winner" src="carlton.gif"/>
+	<img id="loser" alt="loser" src="facepalm.gif"/>
+	<p>
+		<a href="payroll.html">Part A&nbsp;</a>
+		<a href="match.html">&nbsp;Part C</a>
+	</p>
+</body>
+</html>

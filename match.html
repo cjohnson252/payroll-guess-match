@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="all" href="match.css"/>
+	<script src="match.js"></script>
+	<title>Match</title>
+</head>
+<body>
+	<p>You will be shown pairs of images for a specific amount of time to memorize their locations. When the images are hidden, match each pair to win the game.</p>
+	<form id="input">
+		<label>Select Number of Tiles:</label>
+		<input type="radio" name="tiles" value="8">8
+		<input type="radio" name="tiles" value="10">10
+		<input type="radio" name="tiles" value="12">12
+		<br>
+		<br>
+		<label>Select Difficulty:</label>
+		<input type="radio" name="difficulty" value="1">Easy
+		<input type="radio" name="difficulty" value="2">Medium
+		<input type="radio" name="difficulty" value="3">Hard
+		<br>
+		<br>
+		<input type="submit" value="Play" onclick="play(); return false;">	
+		<br>
+	</form>
+	<p id="loss">You Lost!</p>
+	<div id="win"> 
+		<p>You won!</p>
+		<img alt="trophy" src="trophy.gif"/>
+		<br>
+	</div>
+	<p id="timer">Time Remaining: </p>
+	<form id="again">
+		<input type="submit" value="Play Again" onclick="reset();">
+	</form>
+	
+	
+	<table id="t8_show">
+		<tr>
+			<td id="t81" onclick="check(8, 1);"></td>
+			<td id="t82" onclick="check(8, 2);"></td>
+			<td id="t83" onclick="check(8, 3);"></td>
+			<td id="t84" onclick="check(8, 4);"></td>
+		</tr>
+		<tr>
+			<td id="t85" onclick="check(8, 5);"></td>
+			<td id="t86" onclick="check(8, 6);"></td>
+			<td id="t87" onclick="check(8, 7);"></td>
+			<td id="t88" onclick="check(8, 8);"></td>
+		</tr>
+		<tr>
+			<td id="t89" onclick="check(8, 9);"></td>
+			<td id="t810" onclick="check(8, 10);"></td>
+			<td id="t811" onclick="check(8, 11);"></td>
+			<td id="t812" onclick="check(8, 12);"></td>
+		</tr>
+		<tr>
+			<td id="t813" onclick="check(8, 13);"></td>
+			<td id="t814" onclick="check(8, 14);"></td>
+			<td id="t815" onclick="check(8, 15);"></td>
+			<td id="t816" onclick="check(8, 16);"></td>
+		</tr>
+	</table>
+	
+	<table id="t10_show">
+		<tr>
+			<td id="t101" onclick="check(10, 1);"></td>
+			<td id="t102" onclick="check(10, 2);"></td>
+			<td id="t103" onclick="check(10, 3);"></td>
+			<td id="t104" onclick="check(10, 4);"></td>
+			<td id="t105" onclick="check(10, 5);"></td>
+		</tr>
+		<tr>
+			<td id="t106" onclick="check(10, 6);"></td>
+			<td id="t107" onclick="check(10, 7);"></td>
+			<td id="t108" onclick="check(10, 8);"></td>
+			<td id="t109" onclick="check(10, 9);"></td>
+			<td id="t1010" onclick="check(10, 10);"></td>
+		</tr>
+		<tr>
+			<td id="t1011" onclick="check(10, 11);"></td>
+			<td id="t1012" onclick="check(10, 12);"></td>
+			<td id="t1013" onclick="check(10, 13);"></td>
+			<td id="t1014" onclick="check(10, 14);"></td>
+			<td id="t1015" onclick="check(10, 15);"></td>
+		</tr>
+		<tr>
+			<td id="t1016" onclick="check(10, 16);"></td>
+			<td id="t1017" onclick="check(10, 17);"></td>
+			<td id="t1018" onclick="check(10, 18);"></td>
+			<td id="t1019" onclick="check(10, 19);"></td>
+			<td id="t1020" onclick="check(10, 20);"></td>
+		</tr>
+	</table>
+	
+	<table id="t12_show">
+		<tr>
+			<td id="t121" onclick="check(12, 1);"></td>
+			<td id="t122" onclick="check(12, 2);"></td>
+			<td id="t123" onclick="check(12, 3);"></td>
+			<td id="t124" onclick="check(12, 4);"></td>
+			<td id="t125" onclick="check(12, 5);"></td>
+			<td id="t126" onclick="check(12, 6);"></td>
+		</tr>
+		<tr>
+			<td id="t127" onclick="check(12, 7);"></td>
+			<td id="t128" onclick="check(12, 8);"></td>
+			<td id="t129" onclick="check(12, 9);"></td>
+			<td id="t1210" onclick="check(12, 10);"></td>
+			<td id="t1211" onclick="check(12, 11);"></td>
+			<td id="t1212" onclick="check(12, 12);"></td>
+		</tr>
+		<tr>
+			<td id="t1213" onclick="check(12, 13);"></td>
+			<td id="t1214" onclick="check(12, 14);"></td>
+			<td id="t1215" onclick="check(12, 15);"></td>
+			<td id="t1216" onclick="check(12, 16);"></td>
+			<td id="t1217" onclick="check(12, 17);"></td>
+			<td id="t1218" onclick="check(12, 18);"></td>
+		</tr>
+		<tr>
+			<td id="t1219" onclick="check(12, 19);"></td>
+			<td id="t1220" onclick="check(12, 20);"></td>
+			<td id="t1221" onclick="check(12, 21);"></td>
+			<td id="t1222" onclick="check(12, 22);"></td>
+			<td id="t1223" onclick="check(12, 23);"></td>
+			<td id="t1224" onclick="check(12, 24);"></td>
+		</tr>
+	</table>
+	<p>
+		<a href="payroll.html">Part A&nbsp;</a>
+		<a href="guess.html">&nbsp;Part B</a>
+	</p>
+</body>
+</html>

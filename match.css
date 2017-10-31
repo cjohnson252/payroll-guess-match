@@ -1,0 +1,18 @@
+img {
+	width: 150px;
+	height: 150px;
+}
+table {
+	display: none;
+}
+body {
+	text-align: center;
+	background-color: #d1d1e0;
+	font-family: Georgia;
+}
+#loss, #win, #again, #timer {
+	display: none;
+}
+#timer {
+	text-align: left;
+}
